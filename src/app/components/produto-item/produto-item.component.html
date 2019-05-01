@@ -2,7 +2,7 @@
   <div class="card-header">
     {{ produto.product_type | uppercase}} {{ produto.is_perishable ? "T" : "F" }}
     {{ produto.product_name | uppercase}}
-    <button type="button" class="btn rounded-circle">
+    <button type="button" class="btn rounded-circle" (click)="atualizaMercado(produto.id)">
       <span class="fas fa-info"></span>
     </button>
   </div>

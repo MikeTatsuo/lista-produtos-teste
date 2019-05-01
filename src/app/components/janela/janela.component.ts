@@ -19,7 +19,6 @@ export class JanelaComponent implements OnInit {
   currentType: string;
   types: Type[];
   products: Product[];
-  currentProductId: number;
   stores: Store[];
 
   constructor(
@@ -30,20 +29,29 @@ export class JanelaComponent implements OnInit {
   ngOnInit() {
 
     // busca tipos de produtos
+    this.buscaTipos();
+
+    // busca produtos e mercados
+    this.buscaProdutos();
+  }
+
+  buscaTipos():void {
     this.typesService.getTypes().subscribe((respTypes: Type[]) => {
       this.types = respTypes;
       this.currentType = respTypes[0].short;
     })
+  }
 
-    // busca produtos
+  buscaProdutos():void {
     this.productsService.getProducts().subscribe((respProducts:Product[]) => {
       this.products = respProducts;
-
-      // busca lojas com o primeiro item do array de produtos
-      this.productsService.getProductStores(respProducts[0].id).subscribe((respStores:Store[]) => {
-        this.stores = respStores;
-      })
+      this.buscaMercados(respProducts[0].id)
     })
   }
 
+  buscaMercados(id: number):void {
+    this.productsService.getProductStores(id).subscribe((respStores:Store[]) => {
+      this.stores = respStores;
+    })
+  }
 }
