@@ -1,2 +1,129 @@
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
+
+// cores
+$amarelo: #E2B752;
+
+$azul:#597fbf;
+
+$branco-1: #ffffff;
+$branco-2:#fcfcfc;
+$branco-3: #fafafa;
+
+$cinza-1:#e8e8e8;
+$cinza-2: #555555;
+$cinza-3: #707070;
+$cinza-4: #737373;
+$cinza-5: #939393;
+$cinza-6: #999999;
+$cinza-7:#eeeeee;
+
+$preto-1:#000000;
+$preto-2:#333333;
+
+$verde-1: #419047;
+$verde-2: #00a508;
+
+$vermelho-1:#da0000;
+$vermelho-2:#D14952;
+
+$vinho-1: #611829;
+$vinho-2: #350000;
+$vinho-3: #924551;
+
+// font
+$font-family: Roboto;
+$font-tamanho-1: 10px;
+$font-tamanho-2: 11px;
+$font-tamanho-3: 12px;
+$font-tamanho-4: 14px;
+$font-tamanho-5: 16px;
+
+// classes por tipo
+
+@mixin tipo($cor) {
+  background: $branco-2;
+  border-color: $cor;
+  color: $cor;
+}
+
+@mixin active($cor) {
+  background: $cor;
+  color:$cinza-7;
+  border-color: $cor;
+}
+//frutas
+.fr {
+  @include tipo($verde-1);
+}
+
+.fr-active, .fr:hover, .fr-active:hover {
+  @include active($verde-1);
+}
+
+// massas
+.ma {
+  @include tipo($vermelho-2);
+}
+
+.ma-active, .ma:hover, .ma-active:hover {
+  @include active($vermelho-2);
+}
+
+ // carnes
+.ca {
+  @include tipo($amarelo);
+}
+
+.ca-active, .ca:hover, .ca-active:hover {
+  @include active($amarelo);
+}
+
+// laticínios
+.la {
+  @include tipo($azul);
+}
+
+.la-active, .la:hover, .la-active:hover {
+  @include active($azul);
+}
+
+// bebidas
+.be {
+  @include tipo($cinza-4);
+}
+
+.be-active, .be:hover, .be-active:hover {
+  @include active($cinza-4);
+}
+
+// cereais
+.ce {
+  @include tipo($preto-2);
+}
+
+.ce-active, .ce:hover, .ce-active:hover {
+  @include active($preto-2);
+}
+
+// leguminosas
+.le {
+  @include tipo($vinho-3);
+}
+
+.le-active, .le:hover, .le-active:hover {
+  @include active($vinho-3);
+}
+
+// não incluso no layout mas como retorna no products inclui essas categorias
+// utilizei a cor que aparentemente no layou não está designado a nenhum elemento
+// eletrônicos, limpeza, outros respectivamente
+.el, .li, .ou {
+  @include tipo($cinza-6);
+}
+
+.el-active, .el:hover, .el-active:hover
+.li-active, .li:hover, .li-active:hover
+.ou-active, .ou:hover, .ou-active:hover{
+  @include active($cinza-6);
+}

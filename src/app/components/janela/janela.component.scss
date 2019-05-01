@@ -1,0 +1,11 @@
+@import "src/styles.scss";
+
+.container {
+  max-width: 930px;
+  max-height: 573.06px;
+  background: $vinho-1;
+
+  .row {
+    background: $branco-2;
+  }
+}

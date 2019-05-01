@@ -1,15 +1,15 @@
-<div class="card">
+<div [ngClass]="['card rounded-lg ' + ativo]">
   <div class="card-header">
     {{ produto.product_type | uppercase}} {{ produto.is_perishable ? "T" : "F" }}
     {{ produto.product_name | uppercase}}
-    <button type="button" class="btn btn-outline-secondary">
+    <button type="button" class="btn rounded-circle">
       <span class="fas fa-info"></span>
     </button>
   </div>
   <div class="card-body">
     {{"enviado em" | uppercase}} {{produto.shipping_date}}
   </div>
-  <div class="card-footer">
+  <div [ngClass]="{'card-footer text-center': true, 'em-estoque': produto.status ==='em estoque', 'pouco-estoque': produto.status === 'pouco em estoque', 'em-falta': produto.status === 'em falta'}">
     {{produto.status | uppercase}}
   </div>
 </div>

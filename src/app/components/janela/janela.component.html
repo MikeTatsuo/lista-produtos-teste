@@ -1,12 +1,8 @@
-<div class="container">
-  <div class="row">
-    <title-bar></title-bar>
-  </div>
-  <div class="row">
-    <nav-bar [tipos]="types" [ativo]="current_type"></nav-bar>
-  </div>
-  <div class="row">
-    <produtos-box class="col-md-6" [produtos]="products"></produtos-box>
+<div class="container rounded-lg m-auto">
+  <title-bar></title-bar>
+  <div class="row rounded-lg m-auto">
+    <nav-bar class="col-12" [tipos]="types" [ativo]="currentType"></nav-bar>
+    <produtos-box class="col-md-6" [produtos]="products" [ativo]="currentType"></produtos-box>
     <mercado-box class="col-md-6" [lojas]="stores"></mercado-box>
   </div>
 </div>

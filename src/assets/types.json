@@ -1,52 +1,52 @@
 [
   {
     "id": 1,
-    "short": "FR",
+    "short": "fr",
     "name": "frutas"
   },
   {
     "id": 2,
-    "short": "MA",
+    "short": "ma",
     "name": "massas"
   },
   {
     "id": 3,
-    "short": "CA",
+    "short": "ca",
     "name": "carnes"
   },
   {
     "id": 4,
-    "short": "LA",
+    "short": "la",
     "name": "laticínios"
   },
   {
     "id": 5,
-    "short": "BE",
+    "short": "be",
     "name": "bebidas"
   },
   {
     "id": 6,
-    "short": "CE",
+    "short": "ce",
     "name": "cereais"
   },
   {
     "id": 7,
-    "short": "LE",
+    "short": "le",
     "name": "leguminosas"
   },
   {
     "id": 8,
-    "short": "EL",
+    "short": "el",
     "name": "eletrônicos"
   },
   {
     "id": 9,
-    "short": "LI",
+    "short": "li",
     "name": "limpezas"
   },
   {
     "id": 10,
-    "short": "OU",
+    "short": "ou",
     "name": "outros"
   }
 ]

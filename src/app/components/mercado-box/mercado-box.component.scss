@@ -1,0 +1,11 @@
+@import "src/styles";
+
+.card-header {
+  background: $cinza-7;
+  color: $vinho-1;
+}
+
+.card-body {
+  border: 4px solid $cinza-7;
+  color: $vinho-2;
+}

@@ -11,6 +11,7 @@ import { Product } from "../../models/Product";
 export class ProdutosBoxComponent implements OnInit {
 
 @Input() produtos: Product[];
+@Input() ativo: string;
 
   constructor(
   ) { }

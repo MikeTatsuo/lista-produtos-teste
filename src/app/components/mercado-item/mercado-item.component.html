@@ -1,11 +1,8 @@
-<li class="list-group-item">
-  <span class="fas fa-user-circle"></span>
-  <div>
-    {{loja.store}} {{ percentage }}%
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" [ngStyle]="{'width': percentage + '%'}" [attr.aria-valuenow]="percentage" aria-valuemin="0"
-        aria-valuemax="100"></div>
-        <progressbar [value]="percentage" max="100" min="0"></progressbar> <!-- teste ngx-bootstrap -->
+<span class="fas fa-user-circle"></span>
+<div>
+  {{loja.store}} {{ percentage }}
+  <!-- <progressbar class="rounded-pill" [value]="percentage" max="100" min="0"></progressbar> -->
+  <div class="progress">
+      <div class="progress-bar rounded-pill" [ngStyle]="{'width': percentage.toString() + '%'}" role="progressbar" attr.aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
-  </div>
-</li>
+</div>

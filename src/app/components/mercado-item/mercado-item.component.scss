@@ -1,0 +1,13 @@
+@import "src/styles";
+
+.fa-user-circle {
+  color: $vinho-1;
+}
+
+.progress {
+  background: $branco-1 !important;
+
+  .progress-bar {
+    background: $verde-1 !important;
+  }
+}

@@ -1,10 +1,8 @@
-<div class="card">
-  <div class="card-header">
+<div class="card border-0">
+  <div class="card-header border-0 text-center">
     {{"mercado" | uppercase}}
   </div>
-  <div class="card-body">
-    <ul class="list-group">
-      <mercado-item *ngFor="let l of lojas" [loja]="l"></mercado-item>
-    </ul>
+  <div class="card-body rounded-lg list-group-flush p-0">
+    <mercado-item class="list-group-item row m-0" *ngFor="let l of lojas" [loja]="l"></mercado-item>
   </div>
 </div>

@@ -1,0 +1,47 @@
+@import "src/styles";
+
+.card {
+  border-left-width: 6px;
+
+  .card-header {
+    background: $branco-1;
+    color: $preto-1;
+
+    .btn {
+      @include tipo($cinza-3);
+
+      .fa-info {
+        color: $cinza-4;
+      }
+    }
+
+    .btn:hover {
+      @include active($cinza-3);
+
+      .fa-info {
+        color: $branco-1;
+      }
+    }
+  }
+
+  .card-body {
+    background: $branco-1;
+    color: $cinza-2;
+  }
+
+  .card-footer {
+    background: $branco-1;
+  }
+
+  .em-estoque {
+    color: $verde-2;
+  }
+
+  .pouco-estoque {
+    color: $amarelo;
+  }
+
+  .em-falta {
+    color: $vermelho-1;
+  }
+}
