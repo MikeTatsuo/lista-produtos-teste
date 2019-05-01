@@ -5,6 +5,7 @@
     <div class="progress">
       <div class="progress-bar" role="progressbar" [ngStyle]="{'width': percentage + '%'}" [attr.aria-valuenow]="percentage" aria-valuemin="0"
         aria-valuemax="100"></div>
+        <progressbar [value]="percentage" max="100" min="0"></progressbar> <!-- teste ngx-bootstrap -->
     </div>
   </div>
 </li>
