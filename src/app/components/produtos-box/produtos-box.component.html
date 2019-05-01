@@ -1,0 +1,8 @@
+<div class="card">
+  <div class="card-header">
+    {{"produtos" | uppercase}}
+  </div>
+  <div class="card-body row">
+    <produto-item class="col-md-6" *ngFor="let p of produtos" [produto]="p"></produto-item>
+  </div>
+</div>

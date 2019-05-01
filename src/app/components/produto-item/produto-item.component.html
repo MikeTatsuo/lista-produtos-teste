@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-header">
+    {{ produto.product_type | uppercase}} {{ produto.is_perishable ? "T" : "F" }}
+    {{ produto.product_name | uppercase}}
+    <button type="button" class="btn btn-outline-secondary">
+      <span class="fas fa-info"></span>
+    </button>
+  </div>
+  <div class="card-body">
+    {{"enviado em" | uppercase}} {{produto.shipping_date}}
+  </div>
+  <div class="card-footer">
+    {{produto.status | uppercase}}
+  </div>
+</div>

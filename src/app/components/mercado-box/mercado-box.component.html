@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-header">
+    {{"mercado" | uppercase}}
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <mercado-item *ngFor="let l of lojas" [loja]="l"></mercado-item>
+    </ul>
+  </div>
+</div>

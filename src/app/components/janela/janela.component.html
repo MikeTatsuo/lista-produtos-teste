@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <title-bar></title-bar>
+  </div>
+  <div class="row">
+    <nav-bar [tipos]="types" [ativo]="current_type"></nav-bar>
+  </div>
+  <div class="row">
+    <produtos-box class="col-md-6" [produtos]="products"></produtos-box>
+    <mercado-box class="col-md-6" [lojas]="stores"></mercado-box>
+  </div>
+</div>
