@@ -16,10 +16,10 @@ import { Store } from "../../models/Store";
 })
 export class JanelaComponent implements OnInit {
 
-  private currentType: string;
-  private types: Type[];
-  private products: Product[];
-  private stores: Store[];
+  currentType: string;
+  types: Type[];
+  products: Product[];
+  stores: Store[];
 
   isCollapsed: boolean = false;
 
