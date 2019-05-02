@@ -33,20 +33,5 @@
     "id": 7,
     "short": "le",
     "name": "leguminosas"
-  },
-  {
-    "id": 8,
-    "short": "el",
-    "name": "eletrônicos"
-  },
-  {
-    "id": 9,
-    "short": "li",
-    "name": "limpezas"
-  },
-  {
-    "id": 10,
-    "short": "ou",
-    "name": "outros"
   }
 ]

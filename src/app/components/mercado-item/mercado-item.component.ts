@@ -16,8 +16,26 @@ export class MercadoItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
-    // transforma em número inteiro e string
-    this.percentage = Math.round(this.loja.quantity_in_store * 100).toString();
+    // inicia a animação do ProgressBar
+    this.animateProgressBar(this.loja.quantity_in_store);
   }
+
+  // anima o Progress Bar e armazena em this.percentage como string
+  animateProgressBar(p){
+    let max = Math.round(p * 100);
+    let current = 0;
+    let animate = setInterval(() => {
+      current++;
+      this.percentage = current.toString();
+      if (current === max) {
+        this.stopProgressBar(animate);
+      }
+    }, 10)
+  }
+
+  // interrompe a animação do ProgressBar
+  stopProgressBar(progressBar: any){
+    clearInterval(progressBar);
+  }
+
 }

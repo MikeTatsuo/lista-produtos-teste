@@ -1,15 +1,16 @@
-<div [ngClass]="['card rounded-lg ' + ativo]">
-  <div class="card-header">
-    {{ produto.product_type | uppercase}} {{ produto.is_perishable ? "T" : "F" }}
-    {{ produto.product_name | uppercase}}
-    <button type="button" class="btn rounded-circle" (click)="atualizaMercado(produto.id)">
-      <span class="fas fa-info"></span>
+<div [ngClass]="['card rounded-lg p-1 ' + ativo]">
+  <div class="card-header border-0 p-0 d-flex">
+    <div class="text-nowrap overflow-hidden flex-grow-1">
+      <b>{{ produto.product_type | uppercase}} {{ produto.is_perishable ? "T" : "F" }} {{ produto.product_name | uppercase}}</b>
+    </div>
+    <button type="button" class="btn float-right p-0" (click)="atualizaMercado(produto.id)">
+      <span class="fas fa-info-circle rounded-circle"></span>
     </button>
   </div>
-  <div class="card-body">
-    {{"enviado em" | uppercase}} {{produto.shipping_date}}
+  <div class="card-body border-0 p-0">
+    {{"enviado em" | uppercase}} <span class="float-right">{{produto.shipping_date | date: 'dd/MM/yyyy' }}</span>
   </div>
-  <div [ngClass]="{'card-footer text-center': true, 'em-estoque': produto.status ==='em estoque', 'pouco-estoque': produto.status === 'pouco em estoque', 'em-falta': produto.status === 'em falta'}">
-    {{produto.status | uppercase}}
+  <div [ngClass]="{'card-footer text-center border-0 p-1': true, 'em-estoque': produto.status ==='em estoque', 'pouco-estoque': produto.status === 'pouco em estoque', 'em-falta': produto.status === 'em falta'}">
+    <b>{{produto.status | uppercase}}</b>
   </div>
 </div>

@@ -6,31 +6,27 @@
   .card-header {
     background: $branco-1;
     color: $preto-1;
+    font-size: $font-tamanho-5;
 
-    .btn {
-      @include tipo($cinza-3);
-
-      .fa-info {
-        color: $cinza-4;
-      }
+    .fa-info-circle {
+      @include active($cinza-3);
+      color: $branco-1;
     }
 
-    .btn:hover {
-      @include active($cinza-3);
-
-      .fa-info {
-        color: $branco-1;
-      }
+    .fa-info-circle:hover {
+      @include tipo($cinza-3);
     }
   }
 
   .card-body {
     background: $branco-1;
     color: $cinza-2;
+    font-size: $font-tamanho-3;
   }
 
   .card-footer {
     background: $branco-1;
+    font-size: $font-tamanho-3;
   }
 
   .em-estoque {
@@ -44,4 +40,8 @@
   .em-falta {
     color: $vermelho-1;
   }
+}
+
+.card:hover {
+  background: $branco-1!important;
 }

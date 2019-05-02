@@ -2,10 +2,11 @@
 
 .container {
   max-width: 930px;
-  max-height: 573.06px;
+  max-height: 573px;
   background: $vinho-1;
 
   .row {
     background: $branco-2;
+    max-height: 530px;
   }
 }

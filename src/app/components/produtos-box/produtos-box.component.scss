@@ -1,6 +1,12 @@
 @import "src/styles";
 
+.card-header{
+  font-size:$font-tamanho-4;
+}
+
 .card-body {
   background: $branco-2;
   margin: 0px 5px;
+  overflow-y: auto!important;
+  max-height: 440px;
 }

@@ -16,10 +16,10 @@ import { Store } from "../../models/Store";
 })
 export class JanelaComponent implements OnInit {
 
-  currentType: string;
-  types: Type[];
-  products: Product[];
-  stores: Store[];
+  private currentType: string;
+  private types: Type[];
+  private products: Product[];
+  private stores: Store[];
 
   constructor(
     private productsService: ProductsService,
@@ -35,21 +35,21 @@ export class JanelaComponent implements OnInit {
     this.buscaProdutos();
   }
 
-  buscaTipos():void {
+  private buscaTipos():void {
     this.typesService.getTypes().subscribe((respTypes: Type[]) => {
       this.types = respTypes;
       this.currentType = respTypes[0].short;
     })
   }
 
-  buscaProdutos():void {
+  private buscaProdutos():void {
     this.productsService.getProducts().subscribe((respProducts:Product[]) => {
       this.products = respProducts;
       this.buscaMercados(respProducts[0].id)
     })
   }
 
-  buscaMercados(id: number):void {
+  public buscaMercados(id: number):void {
     this.productsService.getProductStores(id).subscribe((respStores:Store[]) => {
       this.stores = respStores;
     })

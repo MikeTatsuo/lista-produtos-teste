@@ -1,8 +1,8 @@
-<span class="fas fa-user-circle"></span>
-<div>
-  {{loja.store}} {{ loja.quantity_in_store | percent }}
+<span class="fas fa-user-circle col-2"></span>
+<div class="col-10">
+  <span>{{loja.store | uppercase}}</span><span class="float-right">{{ loja.quantity_in_store | percent }}</span>
   <div class="progress">
-    <div class="progress-bar rounded-pill" [ngStyle]="{'width': percentage.toString() + '%'}" role="progressbar"
+    <div class="progress-bar rounded-pill" [ngStyle]="{'width': percentage + '%'}" role="progressbar"
       attr.aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
 </div>

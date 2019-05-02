@@ -42,22 +42,29 @@ $font-tamanho-5: 16px;
 // classes por tipo
 
 @mixin tipo($cor) {
-  background: $branco-2;
-  border-color: $cor;
-  color: $cor;
+  background: $branco-2!important;
+  border-color: $cor!important;
+  color: $cor!important;
 }
 
 @mixin active($cor) {
-  background: $cor;
-  color:$cinza-7;
-  border-color: $cor;
+  background: $cor!important;
+  color: $cinza-7!important;
+  border-color: $cor!important;
 }
+
 //frutas
+body {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, san-serif;
+}
+
 .fr {
   @include tipo($verde-1);
 }
 
-.fr-active, .fr:hover, .fr-active:hover {
+.fr-active,
+.fr:hover,
+.fr-active:hover {
   @include active($verde-1);
 }
 
@@ -66,16 +73,20 @@ $font-tamanho-5: 16px;
   @include tipo($vermelho-2);
 }
 
-.ma-active, .ma:hover, .ma-active:hover {
+.ma-active,
+.ma:hover,
+.ma-active:hover {
   @include active($vermelho-2);
 }
 
- // carnes
+// carnes
 .ca {
   @include tipo($amarelo);
 }
 
-.ca-active, .ca:hover, .ca-active:hover {
+.ca-active,
+.ca:hover,
+.ca-active:hover {
   @include active($amarelo);
 }
 
@@ -84,7 +95,9 @@ $font-tamanho-5: 16px;
   @include tipo($azul);
 }
 
-.la-active, .la:hover, .la-active:hover {
+.la-active,
+.la:hover,
+.la-active:hover {
   @include active($azul);
 }
 
@@ -93,7 +106,9 @@ $font-tamanho-5: 16px;
   @include tipo($cinza-4);
 }
 
-.be-active, .be:hover, .be-active:hover {
+.be-active,
+.be:hover,
+.be-active:hover {
   @include active($cinza-4);
 }
 
@@ -102,7 +117,9 @@ $font-tamanho-5: 16px;
   @include tipo($preto-2);
 }
 
-.ce-active, .ce:hover, .ce-active:hover {
+.ce-active,
+.ce:hover,
+.ce-active:hover {
   @include active($preto-2);
 }
 
@@ -111,19 +128,27 @@ $font-tamanho-5: 16px;
   @include tipo($vinho-3);
 }
 
-.le-active, .le:hover, .le-active:hover {
+.le-active,
+.le:hover,
+.le-active:hover {
   @include active($vinho-3);
 }
 
 // não incluso no layout mas como retorna no products inclui essas categorias
 // utilizei a cor que aparentemente no layou não está designado a nenhum elemento
 // eletrônicos, limpeza, outros respectivamente
-.el, .li, .ou {
+.el,
+.li,
+.ou {
   @include tipo($cinza-6);
 }
 
-.el-active, .el:hover, .el-active:hover
-.li-active, .li:hover, .li-active:hover
-.ou-active, .ou:hover, .ou-active:hover{
+.el-active,
+.el:hover,
+.el-active:hover .li-active,
+.li:hover,
+.li-active:hover .ou-active,
+.ou:hover,
+.ou-active:hover {
   @include active($cinza-6);
 }

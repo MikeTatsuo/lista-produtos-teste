@@ -1,11 +1,34 @@
 @import "src/styles";
 
 .card-header {
-  background: $cinza-7;
-  color: $vinho-1;
+  background: $branco-2;
+
+  .mercado {
+    background: $cinza-7;
+    color: $vinho-1;
+    font-size: $font-tamanho-4;
+  }
+
+  .triangulo-esquerda {
+    border-bottom: 27px solid $cinza-7 !important;
+    border-left: 27px solid transparent !important;
+    height: 0;
+    width: 0;
+  }
+
+  .triangulo-direita {
+    border-bottom: 27px solid $cinza-7 !important;
+    border-right: 27px solid transparent !important;
+    height: 0;
+    width: 0;
+  }
 }
 
 .card-body {
   border: 4px solid $cinza-7;
   color: $vinho-2;
+
+  .list-group-item {
+    font-size: $font-tamanho-1;
+  }
 }

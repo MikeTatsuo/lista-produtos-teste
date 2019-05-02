@@ -1,8 +1,8 @@
 <div [ngClass]="['card rounded-lg ' + ativo + '-active']">
-  <div class="card-header text-center border-bottom-0">
-    {{"produtos" | uppercase}}
+  <div class="card-header text-center border-bottom-0 p-2">
+    <b>{{"produtos" | uppercase}}</b>
   </div>
-  <div class="card-body row overflow-auto rounded-lg p-2">
-    <produto-item class="col-md-6 p-2" *ngFor="let p of produtos" [produto]="p" [ativo]="ativo"></produto-item>
+  <div class="card-body row rounded-lg p-0">
+    <produto-item class="col-6 p-2" *ngFor="let p of produtos" [produto]="p" [ativo]="ativo"></produto-item>
   </div>
 </div>

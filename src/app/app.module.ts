@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { ProgressbarModule} from 'ngx-bootstrap'
 
 import { AppComponent } from './app.component';
 import { TitleBarComponent } from './components/title-bar/title-bar.component';
@@ -25,8 +24,7 @@ import { JanelaComponent } from './components/janela/janela.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    ProgressbarModule.forRoot()
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
