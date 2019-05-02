@@ -10,7 +10,8 @@ import { Store } from "../../models/Store";
 })
 export class MercadoBoxComponent implements OnInit {
 
-  @Input() lojas:Store[];
+  @Input() lojas: Store[];
+  @Input() spinnerMercados: boolean;
 
   constructor() { }
 

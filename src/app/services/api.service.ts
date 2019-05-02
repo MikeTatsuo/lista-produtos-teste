@@ -14,12 +14,12 @@ export class ApiService {
   ) { }
 
   // get genérico
-  public get(endpoint:string):Observable<any> {
+  public get(endpoint: string): Observable<any> {
     return this.http.get<any>(`${this.url}${endpoint}`)
   }
 
   // get local json - por não ter rota específica no api e escolha pessoal para não deixar hardcoded
-  public getLocalJSON(localJSON:string):Observable<any> {
+  public getLocalJSON(localJSON: string): Observable<any> {
     return this.http.get<any>(`${localJSON}`)
   }
 }

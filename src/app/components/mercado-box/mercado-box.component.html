@@ -7,6 +7,24 @@
     <div class="triangulo-direita"></div>
   </div>
   <div class="card-body rounded-lg list-group-flush p-0">
-    <mercado-item class="list-group-item d-flex flex-row m-0 p-1 py-2" *ngFor="let l of lojas" [loja]="l"></mercado-item>
+    <mercado-item class="list-group-item d-flex flex-row m-0 p-1 py-2" *ngFor="let l of lojas" [loja]="l">
+    </mercado-item>
+
+    <!-- alert para MERCADO -->
+    <div class="alert alert-warning mb-0" role="alert" *ngIf="lojas &&!lojas.length && !spinnerMercados">
+      <h4 class="alert-heading">Nenhum Mercado encontrado</h4>
+      <hr>
+      <p>Se disponível, selecione um dos produtos ao lado para exibir os mercados em que eles estão disponíveis.</p>
+    </div>
+    <!-- fim do alert para MERCADO -->
+
+    <!-- spinner MERCADO -->
+    <div class="d-flex justify-content-center" *ngIf="spinnerMercados">
+      <div class="spinner-border text-primary text-center m-5" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Carregando...</span>
+      </div>
+    </div>
+    <!-- fim do spinner MERCADO -->
+
   </div>
 </div>

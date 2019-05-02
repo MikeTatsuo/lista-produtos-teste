@@ -8,7 +8,7 @@ import { JanelaComponent } from "../janela/janela.component";
 })
 export class TitleBarComponent implements OnInit {
 
-  chevron:string = "fa-chevron-up";
+  chevron: string = "fa-chevron-up";
 
   constructor(
     private janela: JanelaComponent
@@ -17,9 +17,8 @@ export class TitleBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  collapse(){
+  collapse() {
     this.chevron = this.chevron === "fa-chevron-up" ? "fa-chevron-down" : "fa-chevron-up";
     this.janela.toggleCollapse();
   }
-
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { JanelaComponent } from "../janela/janela.component"
+
 // models
 import { Type } from "../../models/Type";
 
@@ -14,9 +16,13 @@ export class NavBarComponent implements OnInit {
   @Input() ativo: string;
 
   constructor(
+    private janela: JanelaComponent
   ) { }
 
   ngOnInit() {
   }
 
+  filter(type: string): void {
+    this.janela.filterProducts(type);
+  }
 }

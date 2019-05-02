@@ -3,6 +3,24 @@
     <b>{{"produtos" | uppercase}}</b>
   </div>
   <div class="card-body row rounded-lg p-0">
-    <produto-item class="col-6 p-2" *ngFor="let p of produtos" [produto]="p" [ativo]="ativo"></produto-item>
+    <produto-item class="col-6 p-2" *ngFor="let p of produtos" [produto]="p" [ativo]="ativo" [atual]="produtoAtual">
+    </produto-item>
+
+    <!-- alert para PRODUTOS -->
+    <div class="alert alert-danger mb-0 w-100" role="alert" *ngIf="produtos && !produtos.length && !spinnerProdutos">
+      <h4 class="alert-heading">Nenhum Produto encontrado</h4>
+      <hr>
+      <p>Nenhum produto disponível nesta categoria.</p>
+    </div>
+    <!-- fim do alert para PRODUTOS -->
+
+    <!-- spinner PRODUTOS -->
+    <div class="d-flex justify-content-center w-100" *ngIf="spinnerProdutos">
+      <div class="spinner-border text-primary text-center m-5" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Carregando...</span>
+      </div>
+    </div>
+    <!-- fim do spinner PRODUTOS -->
+
   </div>
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {JanelaComponent} from "../janela/janela.component"
+import { JanelaComponent } from "../janela/janela.component"
 
 // models
 import { Product } from "../../models/Product";
@@ -13,6 +13,7 @@ export class ProdutoItemComponent implements OnInit {
 
   @Input() produto: Product;
   @Input() ativo: string;
+  @Input() atual: number;
 
   constructor(
     private janela: JanelaComponent
@@ -22,7 +23,7 @@ export class ProdutoItemComponent implements OnInit {
   }
 
   // busca os mercados do produto selecionado
-  atualizaMercado(id: number) {
+  atualizaMercado(id: number): void {
     this.janela.buscaMercados(id);
   }
 }

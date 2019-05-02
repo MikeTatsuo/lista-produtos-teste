@@ -42,22 +42,22 @@ $font-tamanho-5: 16px;
 // classes por tipo
 
 @mixin tipo($cor) {
-  background: $branco-2!important;
-  border-color: $cor!important;
-  color: $cor!important;
+  background: $branco-2 !important;
+  border-color: $cor !important;
+  color: $cor !important;
 }
 
 @mixin active($cor) {
-  background: $cor!important;
-  color: $cinza-7!important;
-  border-color: $cor!important;
+  background: $cor !important;
+  color: $cinza-7 !important;
+  border-color: $cor !important;
 }
 
-//frutas
 body {
   font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, san-serif;
 }
 
+//frutas
 .fr {
   @include tipo($verde-1);
 }
@@ -134,21 +134,13 @@ body {
   @include active($vinho-3);
 }
 
-// não incluso no layout mas como retorna no products inclui essas categorias
-// utilizei a cor que aparentemente no layou não está designado a nenhum elemento
-// eletrônicos, limpeza, outros respectivamente
-.el,
-.li,
-.ou {
+// todos os tipos
+.all {
   @include tipo($cinza-6);
 }
 
-.el-active,
-.el:hover,
-.el-active:hover .li-active,
-.li:hover,
-.li-active:hover .ou-active,
-.ou:hover,
-.ou-active:hover {
+.all:hover,
+.all-active,
+.all-active:hover {
   @include active($cinza-6);
 }

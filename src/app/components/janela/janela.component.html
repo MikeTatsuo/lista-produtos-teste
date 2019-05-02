@@ -1,10 +1,11 @@
 <div class="container rounded-lg card px-2 pb-2">
   <title-bar class="card-header p-1 border-0"></title-bar>
   <div [collapse]="isCollapsed">
-    <div class="card-body row rounded-lg mx-auto p-0" >
-    <nav-bar class="col-12 p-2" [tipos]="types" [ativo]="currentType"></nav-bar>
-    <produtos-box class="col-6 p-1" [produtos]="products" [ativo]="currentType"></produtos-box>
-    <mercado-box class="col-6 p-1" [lojas]="stores"></mercado-box>
-  </div>
+    <div class="card-body row rounded-lg mx-auto p-0">
+      <nav-bar class="col-12 p-2" [tipos]="types" [ativo]="currentType"></nav-bar>
+      <produtos-box class="col-6 p-1" [produtos]="currentProducts" [ativo]="currentType"
+        [spinnerProdutos]="loadingProdutos" [produtoAtual]="currentProduct"></produtos-box>
+      <mercado-box class="col-6 p-1" [lojas]="stores" [spinnerMercados]="loadingMercados"></mercado-box>
+    </div>
   </div>
 </div>

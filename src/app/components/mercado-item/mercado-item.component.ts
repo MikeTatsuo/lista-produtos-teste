@@ -21,7 +21,7 @@ export class MercadoItemComponent implements OnInit {
   }
 
   // anima o Progress Bar e armazena em this.percentage como string
-  animateProgressBar(p){
+  animateProgressBar(p) {
     let max = Math.round(p * 100);
     let current = 0;
     let animate = setInterval(() => {
@@ -34,7 +34,7 @@ export class MercadoItemComponent implements OnInit {
   }
 
   // interrompe a animação do ProgressBar
-  stopProgressBar(progressBar: any){
+  stopProgressBar(progressBar: any) {
     clearInterval(progressBar);
   }
 

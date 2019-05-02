@@ -1,3 +1,5 @@
 <nav class="nav nav-pills justify-content-center">
-  <button type="button" *ngFor="let tipo of tipos" [ngClass]="['nav-item btn btn-outline-dark rounded-pill p-0', ativo === tipo.short ? tipo.short + '-active' : tipo.short ]">{{ tipo.name | uppercase }}</button>
+  <button type="button" *ngFor="let tipo of tipos"
+    [ngClass]="['nav-item btn btn-outline-dark rounded-pill p-0', ativo === tipo.short ? tipo.short + '-active' : tipo.short ]"
+    (click)="filter(tipo.short)">{{ tipo.name | uppercase }}</button>
 </nav>

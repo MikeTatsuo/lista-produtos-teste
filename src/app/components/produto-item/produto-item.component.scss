@@ -13,7 +13,8 @@
       color: $branco-1;
     }
 
-    .fa-info-circle:hover {
+    .fa-info-circle:hover,
+    .atual {
       @include tipo($cinza-3);
     }
   }
@@ -43,5 +44,11 @@
 }
 
 .card:hover {
-  background: $branco-1!important;
+  background: $branco-1 !important;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.16);
+}
+
+.card:active {
+  box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.16);
 }

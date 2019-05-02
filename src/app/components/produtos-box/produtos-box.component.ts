@@ -10,8 +10,10 @@ import { Product } from "../../models/Product";
 })
 export class ProdutosBoxComponent implements OnInit {
 
-@Input() produtos: Product[];
-@Input() ativo: string;
+  @Input() produtos: Product[];
+  @Input() ativo: string;
+  @Input() spinnerProdutos: boolean;
+  @Input() produtoAtual: number;
 
   constructor(
   ) { }
