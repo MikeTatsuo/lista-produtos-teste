@@ -21,6 +21,8 @@ export class JanelaComponent implements OnInit {
   private products: Product[];
   private stores: Store[];
 
+  isCollapsed: boolean = false;
+
   constructor(
     private productsService: ProductsService,
     private typesService: TypesService
@@ -53,5 +55,9 @@ export class JanelaComponent implements OnInit {
     this.productsService.getProductStores(id).subscribe((respStores:Store[]) => {
       this.stores = respStores;
     })
+  }
+
+  public toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed
   }
 }

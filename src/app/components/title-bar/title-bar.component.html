@@ -1,21 +1,21 @@
-<div class="row">
+<div class="row m-auto mb-1">
   <div class="col">
     <span class="titulo">
       <b>{{"produtos" | uppercase }}</b>
     </span>
-    <button type="button" class="btn">
+    <button type="button" class="btn btn-busca">
       <span class="fas fa-search"></span>
     </button>
   </div>
-  <div class="col text-right">
-    <button type="button" class="btn">
+  <div class="col text-right p-0">
+    <button type="button" class="btn btn-list">
       <span class="fas fa-list"></span>
     </button>
-    <button type="button" class="btn">
+    <button type="button" class="btn btn-maximize">
       <span class="far fa-window-maximize"></span>
     </button>
-    <button type="button" class="btn">
-      <span class="fas fa-chevron-down"></span>
+    <button type="button" class="btn btn-chevron" (click)="collapse()">
+      <span [ngClass]="['fas', chevron]"></span>
     </button>
   </div>
 </div>
